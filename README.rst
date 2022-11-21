@@ -35,7 +35,13 @@ repo:     Repository where production results are located
 run:      Path to the production results
   '2.2i/runs/test-med-1/w_2022_42/DM-36611'
 
-Name: metrics
+Setup:
+======
+setup -r . Metrics
+
+Name:
+=====
+metrics
 
 Commands:
 +++++++++
@@ -58,9 +64,14 @@ metrics make-js-file ./minput.yaml
 
 sbatch make_json.sl
 
+sacct - to see running jobs
+scancel JobId - to cancel some job if need
+
 metrics make-dispatch-sl ./minput.yaml
 
 metrics make-dispatch-sh ./minput.yaml
+
+chmod +x dispatch.sh
 
 sbatch dispatch.sl
 
