@@ -68,9 +68,9 @@ class MIUtils:
         """ The method creates dispatch.sh script to be used with
         dispatch.sl for running in slurm.
         """
-        awk_command = f" \'{{print \"dispatch_verify.py {self.sand_box}/\" "
+        awk_command = f" \'{{print \"dispatch_verify.py {self.sand_box}\" "
         awk_command += "$1,\"--ignore-blobs --ignore-lsstsw  --url https://squash-restful-api.lsst.codes "
-        awk_command += "--env=ldf --date-created \"DATETAG\":00Z\"}}\'"
+        awk_command += "--env=ldf --date-created \"DATETAG\":00Z\"}\'"
         template = ["#!/bin/env bash", "# Look up at https://eups.lsst.codes/stack/src/tags/",
                     f"export DATETAG=\"{self.date_tag}\"", f"export DATASET=\"{self.dataset}\"",
                     "export DATASET_REPO_URL=\"https://community.lsst.org/t/"
