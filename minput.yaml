@@ -1,0 +1,18 @@
+dataset:
+  'DC2_test-med-1'
+run_id:
+  'DM-36611'
+version_tag:
+  'w_2022_42'
+sand_box:
+  '/sdf/group/rubin/sandbox/kuropatk/metrics_json/'
+date_tag:
+  '2022-10-20T07:51'
+squash_login:
+  '<squash login>'
+squash_pas:
+  '<squash password>'
+repo:
+  '/sdf/group/rubin/repo/dc2/'
+run:
+  '2.2i/runs/test-med-1/w_2022_42/DM-36611'
