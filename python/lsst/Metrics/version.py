@@ -4,7 +4,7 @@ from typing import Dict, Optional
 
 __version__: str = "unknown"
 __repo_version__: str = "unknown"
-__fingerprint__: str = "0677581c5b5b6b10ef83c45f6e9c301b281cec28 *"
+__fingerprint__: str = "416445cdbf2a1c8f9564380ef7a00d9edcc82072 *"
 __dependency_versions__: Dict[str, Optional[str]] = {}
 __all__ = (
     "__version__",
