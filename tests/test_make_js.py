@@ -39,7 +39,8 @@ CURR_DIR = os.getcwd()
 
 class TestMakeJs(unittest.TestCase):
     def test_make_json(self):
-        miu = MIUtils(TEST_DATA_PATH)
+        data_path = os.path.realpath(TEST_DATA_PATH)
+        miu = MIUtils(data_path)
 
         with TemporaryDirectory() as temp_dir:
             test_dir = Path(temp_dir)
