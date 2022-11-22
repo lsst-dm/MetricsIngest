@@ -34,7 +34,7 @@ TEST_DATA_PATH = Path(
     environ["METRICS_DIR"], "tests", "data", "minput.yaml"
 )
 
-TEST_MAKE_JS_NAME = "make-dispatch-sh"
+TEST_MAKE_DISPATCH_SH_NAME = "make-dispatch-sh"
 CURR_DIR = os.getcwd()
 
 
@@ -53,11 +53,14 @@ class TestMakeDispatchSh(unittest.TestCase):
             test_file = os.path.realpath("./dispatch.sh")
             test_lines = list()
             created_lines = list()
-            for line in open(comp_file, 'r'):
+            comp_f = open(comp_file, 'r')
+            for line in comp_f:
                 test_lines.append(line)
-            for line in open(test_file, 'r'):
+            comp_f.close()
+            test_f = open(test_file, 'r')
+            for line in test_f:
                 created_lines.append(line)
-
+            test_f.close()
             self.assertEqual(len(test_lines), len(created_lines))
             for (line1, line2) in zip(test_lines, created_lines):
                 self.assertEqual(line1, line2)
